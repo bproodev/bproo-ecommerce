@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bproo Store Dev - Design d'un site de ecommerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+</head>
+<body>
+    <section class="header-section">
+        <div class="container">
+            <header class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="Bproo logo"></a>
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="">Apropos</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="authentification.html">Accout</a></li>
+                    </ul>
+                    <a href="panier.html"><img src="images/cart.png" alt="Cart icon" width="26px" class="cart-icon"></a>
+                    <img src="images/menu.png" alt="menu" width="26px" class="menu-icon" onclick="toogleButton()">
+                </nav>
+            </header>
+        </div>
+    </section>
+
+    <section class="panier">
+        <div class="container">
+            <div class="row">
+                <table>
+                    <tr>
+                        <th>Produit</th>
+                        <th>Quantite</th>
+                        <th>Sous Total</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="info-produit">
+                                <img src="images/buy-1.jpg" alt="">
+                                <div class="text-produit">
+                                    <h3>T-Shirt Rouge XHR</h3>
+                                    <p>6000 cfa</p>
+                                    <a href="">supprimer</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number" value="1">
+                        </td>
+                        <td>
+                            6000 fcfa
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="info-produit">
+                                <img src="images/buy-1.jpg" alt="">
+                                <div class="text-produit">
+                                    <h3>T-Shirt Rouge XHR</h3>
+                                    <p>7000 cfa</p>
+                                    <a href="">supprimer</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number" value="1">
+                        </td>
+                        <td>
+                            7000 fcfa
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="info-produit">
+                                <img src="images/buy-1.jpg" alt="">
+                                <div class="text-produit">
+                                    <h3>T-Shirt Rouge XHR</h3>
+                                    <p>6000 cfa</p>
+                                    <a href="">supprimer</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number" value="1">
+                        </td>
+                        <td>
+                            6000 fcfa
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row tataux">
+                <table >
+                    <tr>
+                        <td>Sous Total</td>
+                        <td>25000 fcfa</td>
+                    </tr>
+                    <tr>
+                        <td>Tax</td>
+                        <td>2000 fcfa</td>
+                    </tr>
+                    <tr>
+                        <td>Tataux</td>
+                        <td>27000 fcfa</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- footer de la page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Téléchargez notre appli</h3>
+                    <p>Téléchargez l'application pour téléphone mobile Android et ios</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png" alt="android app">
+                        <img src="images/app-store.png" alt="ios app">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <div class="wl">
+                        <img src="images/logo-white.png" alt="white logo">
+                    </div>
+                    <p>Notre objectif est de rendre durablement le plaaisir et les bienfaits du sport accessible a tous.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="">Coupons</a></li>
+                        <li><a href="">Article de blog</a></li>
+                        <li><a href="">Politique de retour</a></li>
+                        <li><a href="">Rejoignez l'affiliation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Suivez Nous</h3>
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&copy; bproo dev 2021</p>
+        </div>
+    </footer>
+
+    <!-- javascript code -->
+    <script>
+        var menuItems = document.getElementById('menuItems');
+
+        menuItems.style.maxHeight = '0px';
+        menuItems.style.padding   = '0px';
+
+        function toogleButton(){
+            if(menuItems.style.maxHeight == '0px'){
+                menuItems.style.maxHeight = '200px';
+                menuItems.style.padding   = '15px';
+            }else{
+                menuItems.style.maxHeight = '0px';
+                menuItems.style.padding   = '0px';
+            }
+        }
+    </script>
+</body>
+</html>
