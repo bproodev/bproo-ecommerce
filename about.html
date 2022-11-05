@@ -30,33 +30,20 @@
 
             <div class="row">
                 <div class="col-2">
-                    <img src="images/image1.png" alt="landing image">
+                    <h1>A propos de nous</h1>
+                    <p>Salut a tous les pros de ce soir et aujourdhui nous avons apris un peu git </p>
+                    <a href="produits.html">Supeur &#8594;</a>
                 </div>
                 <div class="col-2">
-                    <div class="form-container">
-                        <div class="form-button">
-                            <span onclick="connexionFonction()">Connexion</span>
-                            <span onclick="inscriptionFonction()">Inscription</span>
-                            <hr id="Indicateur">
-                        </div>
-                        <form id="Connexion">
-                            <input type="email" placeholder="votre email">
-                            <input type="password" placeholder="votre mot de passe">
-                            <input type="submit" value="Connexion" class="form-btn">
-                            <a href="">mot de passe oublier?</a>
-                        </form>
-                        <form id="Inscription">
-                            <input type="text" placeholder="votre nom">
-                            <input type="email" placeholder="votre email">
-                            <input type="password" placeholder="votre mot de passe">
-                            <input type="submit" value="Inscription" class="form-btn">
-                        </form>
-                    </div>
+                    <img src="images/image1.png" alt="landing image">
                 </div>
             </div>
         </div>
     </section>
-    
+    <!-- section des categories -->
+
+
+
     <!-- footer de la page -->
     <footer class="footer">
         <div class="container">
@@ -115,25 +102,6 @@
                 menuItems.style.padding   = '0px';
             }
         }
-    </script>
-    <!-- script code pour le form toggle -->
-    <script>
-        var connexion = document.getElementById('Connexion');
-        var inscription = document.getElementById('Inscription');
-        var indicateur = document.getElementById('Indicateur');
-
-        function connexionFonction(){
-            connexion.style.transform = 'translateX(300px)';
-            inscription.style.transform = 'translateX(300px)';
-            indicateur.style.transform = 'translateX(0px)';
-        }
-
-        function inscriptionFonction(){
-            connexion.style.transform = 'translateX(0px)';
-            inscription.style.transform = 'translateX(0px)';
-            indicateur.style.transform = 'translateX(130px)';
-        }
-
     </script>
 </body>
 </html>
